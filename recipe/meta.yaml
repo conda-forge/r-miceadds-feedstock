@@ -1,4 +1,4 @@
-{% set version = '3.11-6' %}
+{% set version = "3.12-26" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/miceadds_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/miceadds/miceadds_{{ version }}.tar.gz
-  sha256: 121d03c812fbcf584a25585ac73f6c44f4b5d6cd21b05362ddd15395fb3909f6
+  sha256: 7fde441038cbecccc51d39d7410edf9a1848e218e9b69f755a2bf02070c43cc9
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -55,21 +55,13 @@ test:
 about:
   home: https://github.com/alexanderrobitzsch/miceadds, https://sites.google.com/site/alexanderrobitzsch2/software
   license: GPL-2.0-or-later
-  summary: Contains functions for multiple imputation which complements existing functionality
-    in R. In particular, several imputation methods for the mice package (van Buuren
-    & Groothuis-Oudshoorn, 2011, <doi:10.18637/jss.v045.i03>) are included. Main features
-    of the miceadds package include plausible value imputation (Mislevy, 1991, <doi:10.1007/BF02294457>),
-    multilevel imputation for variables at any level or with any number of hierarchical
-    and non-hierarchical levels (Grund, Luedtke & Robitzsch, 2018, <doi:10.1177/1094428117703686>;
-    van Buuren, 2018, Ch.7, <doi:10.1201/9780429492259>), imputation using partial least
-    squares (PLS) for high dimensional predictors (Robitzsch, Pham & Yanagida, 2016),
-    nested multiple imputation (Rubin, 2003, <doi:10.1111/1467-9574.00217>), substantive
-    model compatible imputation (Bartlett et al., 2015, <doi:10.1177/0962280214521348>),
-    and features for the generation of synthetic datasets (Reiter, 2005, <doi:10.1111/j.1467-985X.2004.00343.x>;
+  summary: Contains functions for multiple imputation which complements existing functionality in R. In particular, several imputation methods for the mice package (van Buuren & Groothuis-Oudshoorn, 2011, <doi:10.18637/jss.v045.i03>) are included. Main features of the miceadds package include plausible value imputation (Mislevy,
+    1991, <doi:10.1007/BF02294457>), multilevel imputation for variables at any level or with any number of hierarchical and non-hierarchical levels (Grund, Luedtke & Robitzsch, 2018, <doi:10.1177/1094428117703686>; van Buuren, 2018, Ch.7, <doi:10.1201/9780429492259>), imputation using partial least squares (PLS) for high
+    dimensional predictors (Robitzsch, Pham & Yanagida, 2016), nested multiple imputation (Rubin, 2003, <doi:10.1111/1467-9574.00217>), substantive model compatible imputation (Bartlett et al., 2015, <doi:10.1177/0962280214521348>), and features for the generation of synthetic datasets (Reiter, 2005, <doi:10.1111/j.1467-985X.2004.00343.x>;
     Nowok, Raab, & Dibben, 2016, <doi:10.18637/jss.v074.i11>).
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
