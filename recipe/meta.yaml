@@ -1,4 +1,4 @@
-{% set version = "3.14-3" %}
+{% set version = "3.15-21" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/miceadds_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/miceadds/miceadds_{{ version }}.tar.gz
-  sha256: ed63860a80fea4e0c0d861564e996242a9a0ab73ddd90892f5d9076fb051ce96
+  sha256: 6ca583aaa0bfcf2e257b590e4c327db8544ac7cb4881794f19ad812dbced7279
 
 build:
   merge_build_host: true  # [win]
