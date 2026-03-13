@@ -1,4 +1,4 @@
-{% set version = "3.18-36" %}
+{% set version = "3.19-16" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/miceadds_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/miceadds/miceadds_{{ version }}.tar.gz
-  sha256: 3bca36fea6aeabb78f9edffd47d2733a35fdf9f9dfddd9bb002aa4c1532cea2d
+  sha256: 319b243c06326a943c85a4931b3daf4181a1f548b1f1b305604f8c645a3c0e97
 
 build:
   number: 0
@@ -54,10 +54,10 @@ test:
 about:
   home: https://github.com/alexanderrobitzsch/miceadds, https://sites.google.com/site/alexanderrobitzsch2/software
   license: GPL-2.0-or-later
-  summary: Contains functions for multiple imputation which complements existing functionality in R. In particular, several imputation methods for the mice package (van Buuren & Groothuis-Oudshoorn, 2011, <doi:10.18637/jss.v045.i03>) are included. Main features of the miceadds package include plausible value imputation (Mislevy,
-    1991, <doi:10.1007/BF02294457>), multilevel imputation for variables at any level or with any number of hierarchical and non-hierarchical levels (Grund, Luedtke & Robitzsch, 2018, <doi:10.1177/1094428117703686>; van Buuren, 2018, Ch.7, <doi:10.1201/9780429492259>), imputation using partial least squares (PLS) for high
-    dimensional predictors (Robitzsch, Pham & Yanagida, 2016), nested multiple imputation (Rubin, 2003, <doi:10.1111/1467-9574.00217>), substantive model compatible imputation (Bartlett et al., 2015, <doi:10.1177/0962280214521348>), and features for the generation of synthetic datasets (Reiter, 2005, <doi:10.1111/j.1467-985X.2004.00343.x>;
-    Nowok, Raab, & Dibben, 2016, <doi:10.18637/jss.v074.i11>).
+  summary: Contains functions for multiple imputation which complements existing functionality in R. In particular, several imputation methods for the mice package (van Buuren & Groothuis-Oudshoorn, 2011, <doi:10.18637/jss.v045.i03>) are included. Main features of the miceadds package include plausible value imputation
+    (Mislevy, 1991, <doi:10.1007/BF02294457>), multilevel imputation for variables at any level or with any number of hierarchical and non-hierarchical levels (Grund, Luedtke & Robitzsch, 2018, <doi:10.1177/1094428117703686>; van Buuren, 2018, Ch.7, <doi:10.1201/9780429492259>), imputation using partial least squares 
+    (PLS) for high dimensional predictors (Robitzsch, Pham & Yanagida, 2016), nested multiple imputation (Rubin, 2003, <doi:10.1111/1467-9574.00217>), substantive model compatible imputation (Bartlett et al., 2015, <doi:10.1177/0962280214521348>), and features for the generation of synthetic datasets (Reiter, 2005, 
+    <doi:10.1111/j.1467-985X.2004.00343.x>; Nowok, Raab, & Dibben, 2016, <doi:10.18637/jss.v074.i11>).
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
