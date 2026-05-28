@@ -1,15 +1,15 @@
-{% set version = "3.19-16" %}
+{% set version = "3.20-10" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-miceadds
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/miceadds_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/miceadds/miceadds_{{ version }}.tar.gz
-  sha256: 319b243c06326a943c85a4931b3daf4181a1f548b1f1b305604f8c645a3c0e97
+  sha256: b980f102c4ebafcbce8d58559310c1efb69fb2dfbd719de170ef1e051a67f188
 
 build:
   number: 0
